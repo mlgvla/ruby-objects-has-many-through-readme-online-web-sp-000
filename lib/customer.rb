@@ -24,7 +24,7 @@ class Customer
   end
 
   def waiters #returns all the waiter objects from customer's meal ojbects
-    meals.select do |meal|
+    meals.collect do |meal|
       meal.waiter
     end
   end
