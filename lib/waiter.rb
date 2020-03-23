@@ -28,7 +28,5 @@ class Waiter
                             a.tip <=> b.tip
                           end
     biggest_tipped_meal.customer
-
-    end
   end
 end
