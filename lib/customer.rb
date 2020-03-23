@@ -17,15 +17,15 @@ class Customer
     Meal.new(waiter, self, total, tip)
   end
 
-  def meals
+  def meals #returns customer's meal ojbects
     Meal.all.select do |meal|
       meal.customer == self
     end
   end
 
-  def waiters
-    Waiter.all.select do |waiter|
-      waiter.customer == self
+  def waiters #returns all the waiter objects from customer's meal ojbects
+    meals.select do |meal|
+      meal.waiter
     end
   end
 
