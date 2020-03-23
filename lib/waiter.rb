@@ -22,4 +22,13 @@ class Waiter
       meal.waiter == self
     end
   end
+
+  def best_tipper
+    biggest_tipped_meal = meals.max do |a, b|
+                            a.tip <=> b.tip
+                          end
+    biggest_tipped_meal.customer
+      
+    end
+  end
 end
