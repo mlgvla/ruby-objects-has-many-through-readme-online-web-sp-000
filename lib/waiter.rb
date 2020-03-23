@@ -6,7 +6,7 @@ class Waiter
   def initialize(name, yrs_experience)
     @name = name
     @yrs_experience = yrs_experience
-    @@age << self
+    @@all << self
   end
 
   def self.all
